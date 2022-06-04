@@ -1,0 +1,162 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+body{
+    background: url("./images/Animated Shape.svg") no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 100vh;
+    overflow-x: hidden;
+}
+.container{
+    width: 100vw;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    color: #fff;
+    padding: 30px;
+}
+.container h2{
+    text-align: center;
+    margin: 20px 0;
+}
+
+.task{
+    width: 50%;
+    position: relative;
+    background-color: #fff;
+    padding: 30px 20px;
+    border-radius: 10px;
+    box-shadow: 0 15px 30px rgba(0,0,0,0.3);
+    display: flex;
+    justify-content: space-between;
+}
+
+.task input{
+    width: 85%;
+    height: 45px;
+    color: #000;
+    font-size: 20px;
+    outline: none;
+    border: none;
+    border-bottom:1px solid #666;
+    padding: 10px;
+}
+
+.task button{
+    background-color: orangered;
+    height: 50px;
+    font-size: 18px;
+    color: #fff;
+    text-transform: uppercase;
+    border-radius: 7px;
+    padding: 0 10px;
+    border: none;
+    box-shadow: 2px 5px 9px rgba(0,0,0,0.3);
+    transition: all 0.3;
+}
+
+.task button:hover{
+    background: red;
+    color: #000;
+}
+
+.lists{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    max-width: 100%;
+    position: relative;
+    background: none;
+    margin: 10px 0;
+    padding: 20px 30px;
+    margin-top: 50px;
+    color: #000;
+    font-size: 16px;
+}
+
+.newTask{
+    background: #fff;
+    height: 90px;
+    min-width: 500px;
+    padding: 15px 25px;
+    margin: 15px;
+    color: #000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 2px solid rgba(0,0,0,0.3);
+    border-radius: 10px;
+    cursor: pointer;
+}
+.newTask span{
+    font-size: 20px;
+    font-weight: 600;
+    padding-right: 20px;
+    text-transform: uppercase;
+}
+
+.completed{
+    text-decoration: line-through;
+    text-decoration-thickness: 3px;
+    text-decoration-color: #ff0000;
+    background: #666;
+}
+
+.newTask button{
+    background: none;
+    cursor: pointer;
+    border: none;
+    outline: none;
+    font-size: 30px;
+    color: #000;
+}
+.newTask button:hover{
+    
+    color: red;
+    animation: shake 0.3s infinite;
+}
+
+@keyframes shake{
+    0%{
+        transform: rotate(10deg);
+    }
+    100%{
+        transform: rotate(-10deg);
+    }
+}
+
+
+@media(max-width:1200px){
+    .task{
+        width: 60%;
+    }
+}
+
+@media(max-width:991px){
+    .task{
+        width: 70%;
+    }
+}
+
+@media(max-width:768px){
+    .task{
+        width: 80%;
+    }
+    .newTask{
+        width: 90%;
+    }
+}
+@media(max-width:450px){
+    .task{
+        width: 90%;
+    }
+    .newTask{
+        width: 90%;
+    }
+}
